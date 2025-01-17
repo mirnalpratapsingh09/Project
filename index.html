@@ -78,15 +78,21 @@
             const username = document.getElementById('uname').value;
             const password = document.getElementById('pass').value;
 
-            
-            const storedUsername = localStorage.getItem('username');
-            const storedPassword = localStorage.getItem('password');
+            localStorage.setItem('username', username);
 
-            if (username === storedUsername && password === storedPassword) {
-                alert('Login successful!');
-                
+            let users = JSON.parse(localStorage.getItem('users')) || [];
+
+            const validUser = users.find(function(user){
+                return user.username === username && user.password === password;
+            });
+
+            if(validUser) {
+                alert('Login successful');
+
                 window.location.href = 'home.html';
-            } else {
+            }
+
+            else {
                 alert('Invalid username or password. Please try again.');
             }
 

@@ -263,9 +263,20 @@
   </footer>
 
   <script>
-    document.getElementById("name1").innerHTML = localStorage.getItem('name');
-    document.getElementById("city1").innerHTML = localStorage.getItem('city');
-    document.getElementById("state1").innerHTML = localStorage.getItem('state');
+
+    let users = JSON.parse(localStorage.getItem('users')) || [];
+
+    const username = localStorage.getItem('username');
+
+    const currentUser = users.find(function(user){
+        return user.username === username;
+    });
+
+    const {name,city,state}= currentUser;
+
+    document.getElementById("name1").innerHTML = name;
+    document.getElementById("city1").innerHTML = city;
+    document.getElementById("state1").innerHTML = state;
     
   </script>
 
