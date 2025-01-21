@@ -1,105 +1,126 @@
 <html>
-    <head>
 
-        <meta charset="utf-8">
-        <title>Mirnal-Login Now</title>
-        <link rel="icon" href="images/favicon.ico">
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-      
-        <!-- Bootstrap -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-        
-        <!-- Stylesheet -->
-        <link rel="stylesheet" href="css/styles.css">
-      
-        <!-- Fontawesome(icons) -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<head>
 
-    </head>
+    <meta charset="utf-8">
+    <title>Mirnal-Login Now</title>
+    <link rel="icon" href="images/favicon.ico">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
 
-    <body class="colored-section">
-        <div class="container-fluid">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Fontawesome(icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body class="colored-section">
+    <div class="container-fluid">
 
         <img src="images/logo-red-blank.png" class="center-img-login">
 
         <div class="pricing-column colored-section">
             <div class="card colored-section red-border">
-    
-              <div class="card-header red-border">
-                <h3 class="pricing-text1 ">Sign In for a Unique Experience</h3>
-              </div>
-              
-              <div class="card-footer">
-                <form name="registration" method="get" onsubmit="return false;">
-                    <br><table>
-                        <tr>
-                            <td>
-                                <label for="uname" class="pricing-text1">Username</label>
-                            </td>
-                            <td>
-                                <input type="text" id="uname" name="uname" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="pass" class="pricing-text1">Password</label>
-                            </td>
-                            <td>
-                                <input type="password" id="pass" name="pass" required>
-                            </td>
-                        </tr>
-                    </table><br>
-    
-                <div class="d-grid">
-                    <button type="button" value="Signin" onclick="handleLogin()" class="btn btn-danger sign-button">Sign In</button><br>
-                    <button type="button" value="Signup" onclick="openLocalPage('signup.html')" class="btn btn-outline-danger sign-button">Sign Up</button>
-        
-        
-                </form> 
+
+                <div class="card-header red-border">
+                    <h3 class="pricing-text1 ">Sign In for a Unique Experience</h3>
                 </div>
-    
-              </div> 
-    
+
+                <div class="card-footer">
+                    <form name="registration" method="get" onsubmit="return false;">
+                        <br>
+                        <table>
+                            <tr>
+                                <td>
+                                    <label for="uname" class="pricing-text1">Username</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="uname" name="uname" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="pass" class="pricing-text1">Password</label>
+                                </td>
+                                <td>
+                                    <input type="password" id="pass" name="pass" required>
+                                </td>
+                            </tr>
+                        </table><br>
+
+                        <div class="d-grid">
+                            <button type="button" value="Signin" onclick="handleLogin()"
+                                class="btn btn-danger sign-button">Sign In</button><br>
+                            <button type="button" value="Signup" onclick="openLocalPage('signup.html')"
+                                class="btn btn-outline-danger sign-button">Sign Up</button>
+
+
+                    </form>
+                </div>
+
             </div>
+
         </div>
+    </div>
 
 
-        <script>
+    <script>
 
-            function openLocalPage(fileName) {
-                window.location.href = fileName;
-            }
+         function openLocalPage(fileName) {
+             window.location.href = fileName;
+         }
 
-            function handleLogin() {
+        async function handleLogin() {
             const username = document.getElementById('uname').value;
             const password = document.getElementById('pass').value;
 
-            localStorage.setItem('username', username);
+            try {
+                const response = await fetch("https://678e4251a64c82aeb11fb50a.mockapi.io/users/users");
 
-            let users = JSON.parse(localStorage.getItem('users')) || [];
+                if (!response.ok) throw new Error("Failed to fetch users");
 
-            const validUser = users.find(function(user){
-                return user.username === username && user.password === password;
-            });
+                const users = await response.json();
 
-            if(validUser) {
-                alert('Login successful');
 
-                window.location.href = 'home.html';
+
+                const validUser = users.find(user => user.username === username && user.password === password);
+
+                if (validUser) {
+                    alert("Welcome to the website " + validUser.name);
+                    localStorage.setItem("username",validUser.username)
+                    window.location.href = "home.html";
+                } else {
+                    alert("Invalid username or password.");
+                }
+            } catch (error) {
+                console.error("Login Error:", error);
+                alert("Something went wrong. Please try again.");
             }
-
-            else {
-                alert('Invalid username or password. Please try again.');
-            }
-
-            return false; 
         }
+    </script>
 
-        </script>
+</body>
 
-    </body>
 </html>
+
+
+
+
+
+
+<!-- https://678e4251a64c82aeb11fb50a.mockapi.io/users/:users>
+ 
+ 

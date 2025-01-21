@@ -264,19 +264,26 @@
 
   <script>
 
-    let users = JSON.parse(localStorage.getItem('users')) || [];
+    const req = new XMLHttpRequest();
+    req.open("GET", "https://678e4251a64c82aeb11fb50a.mockapi.io/users/users",true);
 
-    const username = localStorage.getItem('username');
-
-    const currentUser = users.find(function(user){
+    req.onload = function(){
+      const users = JSON.parse(req.responseText);
+      const username= localStorage.getItem("username");
+      const currentUser = users.find(function (user){
         return user.username === username;
-    });
+      });
 
-    const {name,city,state}= currentUser;
+      const {name,city,state}= currentUser;
 
-    document.getElementById("name1").innerHTML = name;
-    document.getElementById("city1").innerHTML = city;
-    document.getElementById("state1").innerHTML = state;
+      document.getElementById("name1").innerHTML = name;
+      document.getElementById("city1").innerHTML = city;
+      document.getElementById("state1").innerHTML = state;
+
+    };
+
+    req.send();
+    
     
   </script>
 
