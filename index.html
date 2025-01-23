@@ -76,6 +76,14 @@
         </div>
     </div>
 
+    <div id="spinner" class="text-center" style="display: none;">
+        <div class="spinner-border text-danger" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <p>Logging you in, please wait...</p>
+      </div>
+      
+
 
     <script>
 
@@ -88,6 +96,9 @@
             const password = document.getElementById('pass').value;
 
             try {
+
+                spinner.style.display ='block';
+
                 const response = await fetch("https://678e4251a64c82aeb11fb50a.mockapi.io/users/users");
 
                 if (!response.ok) throw new Error("Failed to fetch users");
@@ -104,9 +115,11 @@
                     window.location.href = "home.html";
                 } else {
                     alert("Invalid username or password.");
+                    spinner.style.display='none';
                 }
             } catch (error) {
                 console.error("Login Error:", error);
+                spinner.style.display='none';
                 alert("Something went wrong. Please try again.");
             }
         }
